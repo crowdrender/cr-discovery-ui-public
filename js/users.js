@@ -1,0 +1,1 @@
+window.addEventListener("load",()=>{let a=document.querySelector(".update-password-form");a.addEventListener("submit",b=>{let c=!0,d=a.querySelector("#newPassword"),e=a.querySelector("#newPasswordCopy");return d.value||(c=!1),e.value||(c=!1),d.value!==e.value&&(c=!1),c||b.preventDefault(),c})});

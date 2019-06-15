@@ -1,0 +1,1 @@
+export default async function loadPage(){return"loading"===document.readyState?new Promise(a=>{window.addEventListener("DOMContentLoaded",()=>a)}):Promise.resolve()}

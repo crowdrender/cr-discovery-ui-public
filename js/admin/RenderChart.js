@@ -1,0 +1,1 @@
+import Chart from"../lib/chart.min.js";export default function renderChart(...a){new Chart(...a)}

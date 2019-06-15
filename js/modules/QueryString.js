@@ -1,0 +1,1 @@
+export default function getQueryStringParameterByName(a,b=window.location.search){const c=new URLSearchParams(b);return c.get(a)}

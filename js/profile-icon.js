@@ -1,0 +1,1 @@
+const profileElement=document.querySelector(".profile-button");if(profileElement){const a=profileElement.querySelector(".menu");profileElement.addEventListener("click",()=>{a.classList.contains("open")?a.classList.remove("open"):a.classList.add("open")})}
