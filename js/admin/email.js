@@ -1,0 +1,1 @@
+import Vue from"../lib/vue.esm.browser.js";import App from"./emailApp/app.js";const vm=new Vue({el:"#vue-app",components:{App},template:"<App />"});
