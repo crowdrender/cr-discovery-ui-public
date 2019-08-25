@@ -6,7 +6,7 @@ import Preview from"./preview.js";import SendBatchEmail from"./sendBatchEmail.js
     <div>
       <h3>Email Preview</h3>
       <Preview :template="template"/>
-      <SendBatchEmail :template="template" :filter="filter" :subject="subject" />
+      <SendBatchEmail :template="template" :filterString="filterResult" :subject="subject" />
     </div>
   </div>
 </div>
