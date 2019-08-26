@@ -1,0 +1,1 @@
+export default async function recordStreamEvent(a,b){const c={eventName:a,data:b,timestamp:new Date},d={method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify(c)};fetch("/stream",d)}
