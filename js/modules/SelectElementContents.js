@@ -1,0 +1,1 @@
+export default function selectElementContents(a){if(document.body.createTextRange){const b=document.body.createTextRange();b.moveToElementText(a),b.select()}else if(window.getSelection){const b=window.getSelection(),c=document.createRange();c.selectNodeContents(a),b.removeAllRanges(),b.addRange(c)}else throw"Could not select text in element: Unsupported browser."}

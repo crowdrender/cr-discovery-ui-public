@@ -1,0 +1,1 @@
+export default function css(a){const b=document.createElement("style");b.type="text/css",b.innerText=a[0],document.head.appendChild(b)}
