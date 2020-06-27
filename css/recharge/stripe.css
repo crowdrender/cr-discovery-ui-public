@@ -1,0 +1,29 @@
+#payment-form {
+  width: 400px;
+  margin: auto;
+  margin-top: var(--s4); }
+  #payment-form * {
+    box-sizing: border-box; }
+  #payment-form #card-element {
+    height: 34px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  #payment-form #card-errors {
+    font-weight: 300;
+    color: var(--col-grey); }
+  #payment-form #submit {
+    appearance: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    color: white;
+    height: 34px;
+    margin-top: var(--s4);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--col-primary); }
