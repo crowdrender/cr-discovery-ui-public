@@ -1,0 +1,1 @@
+export default(a=>new Promise(b=>setTimeout(b,a)));

@@ -11,7 +11,9 @@
     border: 1px solid rgba(0, 0, 0, 0.2); }
   #payment-form #card-errors {
     font-weight: 300;
-    color: var(--col-grey); }
+    color: #eb1c26;
+    font-family: sans-serif;
+    font-size: 14px; }
   #payment-form #submit {
     appearance: none;
     border: none;
@@ -27,3 +29,21 @@
     justify-content: center;
     align-items: center;
     background-color: var(--col-primary); }
+    #payment-form #submit.disabled {
+      background-color: var(--col-grey);
+      pointer-events: none; }
+  #payment-form .loader {
+    display: none;
+    text-align: center; }
+  #payment-form.status-loading .loader {
+    display: block; }
+
+.status-success, .status-error {
+  margin-top: var(--s4);
+  display: none;
+  text-align: center; }
+  .status-success.visible, .status-error.visible {
+    display: block; }
+  .status-success .btn, .status-error .btn {
+    margin: 0 auto;
+    margin-top: var(--s4); }
