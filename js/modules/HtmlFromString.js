@@ -1,0 +1,1 @@
+export default function HTMLFromString(a){return new DOMParser().parseFromString(a,"text/html").body.firstChild}
