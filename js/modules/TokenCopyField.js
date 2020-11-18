@@ -43,7 +43,7 @@ import{getCookie}from"./Cookie.js";import css from"./CssLoader.js";import copyTe
   padding: 4px;
   top: 0;
   right: 0;
-  background-color: #0099ff;
+  background-color: var(--col-primary);
 }
 
 .token-copy .button::after {
