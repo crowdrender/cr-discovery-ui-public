@@ -1,0 +1,46 @@
+.summary {
+  text-align: center;
+  margin-top: var(--s4); }
+  .summary #card-element {
+    height: 34px;
+    border-radius: 8px;
+    padding: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.2); }
+  .summary #card-errors {
+    font-weight: 300;
+    color: #eb1c26;
+    font-family: sans-serif;
+    font-size: 14px; }
+  .summary #submit {
+    appearance: none;
+    border: none;
+    text-transform: uppercase;
+    font-weight: 600;
+    width: 100%;
+    color: white;
+    height: 34px;
+    margin-top: var(--s4);
+    border-radius: 8px;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--col-primary); }
+    .summary #submit.disabled {
+      background-color: var(--col-grey);
+      pointer-events: none; }
+  .summary .loader {
+    display: none;
+    text-align: center; }
+  .summary.status-loading .loader {
+    display: block; }
+
+.status-success, .status-error {
+  margin-top: var(--s4);
+  display: none;
+  text-align: center; }
+  .status-success.visible, .status-error.visible {
+    display: block; }
+  .status-success .btn, .status-error .btn {
+    margin: 0 auto;
+    margin-top: var(--s4); }
