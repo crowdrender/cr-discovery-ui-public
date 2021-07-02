@@ -1,0 +1,1 @@
+import Vue from"../lib/vue.esm.browser.js";import CancelPage from"./cancelPage/app.js";new Vue({el:"#cancel-page-app",components:{CancelPage},template:"<CancelPage />"});
