@@ -1,4 +1,4 @@
-import{getCookie}from"./Cookie.js";import css from"./CssLoader.js";import copyTextToClipboard from"./Clipboard.js";import createSnackbarItem from"./Snackbar.js";import selectElementContents from"./SelectElementContents.js";const copySvgMarkup=`
+import{getCookie}from"./Cookie.js";import copyTextToClipboard from"./Clipboard.js";import createSnackbarItem from"./Snackbar.js";import selectElementContents from"./SelectElementContents.js";const copySvgMarkup=`
 <svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 606.816 606.816">
   <g fill="#fff">
     <g>
@@ -24,36 +24,4 @@ import{getCookie}from"./Cookie.js";import css from"./CssLoader.js";import copyTe
       </g>
     </g>
   </g>
-</svg>`;css`
-.token-copy {
-  width: 257px;
-  height: 32px;
-  box-sizing: border-box;
-  padding: 3px;
-  position: relative;
-  display: block;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.2);
-}
-.token-copy .button {
-  position: absolute;
-  height: 30px;
-  width: 30px;
-  box-sizing: border-box;
-  padding: 4px;
-  top: 0;
-  right: 0;
-  background-color: var(--col-primary);
-}
-
-.token-copy .button::after {
-  content: '';
-  position: absolute;
-  display: block;
-  height: 30px;
-  width: 30px;
-  top: 0;
-  right: 30;
-  background: linear-gradient(90deg, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-}
-`;function displayLogoutMessage(a){a.innerHTML="Please log out and in again to copy token"}function displayTokenComponent(a,b){a.innerHTML=b,a.addEventListener("click",()=>{selectElementContents(a)});const c=document.createElement("div");c.classList.add("button"),c.addEventListener("click",async a=>{a.preventDefault(),a.stopPropagation();try{await copyTextToClipboard(b),createSnackbarItem("Successfully copied token")}catch(a){createSnackbarItem("Failed to copy token")}}),c.innerHTML=copySvgMarkup,a.appendChild(c)}export default function createTokenCopyField(a){const b=document.querySelector(a);if(b){const a=getCookie("CRAuth");return a?void displayTokenComponent(b,a):void displayLogoutMessage(b)}}
+</svg>`;function displayLogoutMessage(a){a.innerHTML="Please log out and in again to copy token"}function displayTokenComponent(a,b){a.innerHTML=b,a.addEventListener("click",()=>{selectElementContents(a)});const c=document.createElement("div");c.classList.add("button"),c.addEventListener("click",async a=>{a.preventDefault(),a.stopPropagation();try{await copyTextToClipboard(b),createSnackbarItem("Successfully copied token")}catch(a){createSnackbarItem("Failed to copy token")}}),c.innerHTML=copySvgMarkup,a.appendChild(c)}export default function createTokenCopyField(a){const b=document.querySelector(a);if(b){const a=getCookie("CRAuth");return a?void displayTokenComponent(b,a):void displayLogoutMessage(b)}}
