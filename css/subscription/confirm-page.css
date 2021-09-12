@@ -1,0 +1,207 @@
+:root {
+  --col-stripe-error: #eb1c26;
+}
+
+html, body, .content {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body > .content {
+  display: grid;
+  grid-template-rows: auto 1fr;
+  max-width: unset;
+  padding: 0;
+}
+body > .content .header-menu {
+  padding: var(--s4);
+  width: 100%;
+  max-width: 960px;
+  margin: 0 auto;
+}
+body > .footer {
+  margin-top: 0;
+}
+
+* + p {
+  margin-top: 0;
+}
+
+#confirm-subscription-app {
+  height: 100%;
+}
+
+.confirm-subscription-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  height: 100%;
+}
+
+.payment-panel, .summary-panel, .complete-panel, .login-panel {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  padding: var(--s4);
+}
+
+.summary-panel {
+  padding-top: var(--s6);
+  align-items: flex-end;
+  text-align: end;
+  background-color: var(--col-primary);
+  color: white;
+}
+
+.summary-content, .payment-content, .complete-content, .login-content {
+  gap: var(--s3);
+  display: grid;
+  align-items: flex-end;
+  max-width: 450px;
+}
+
+.summary-content, .payment-content, .complete-content {
+  grid-template-columns: 1fr;
+}
+
+.complete-panel h2 {
+  line-height: 1em;
+  font-size: 2em;
+}
+.complete-panel .loader {
+  appearance: none;
+  border: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--s2);
+  background-color: var(--col-primary);
+  color: white;
+  height: 36px;
+  width: 160px;
+}
+.complete-panel .loader .dots {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--s2);
+}
+.complete-panel .loader .dots .dot {
+  width: var(--s2);
+  height: var(--s2);
+  border-radius: var(--s1);
+  background-color: white;
+  animation: bounce infinite 1s linear;
+}
+.complete-panel .loader .dots .dot:nth-child(1) {
+  animation-delay: 0s;
+}
+.complete-panel .loader .dots .dot:nth-child(2) {
+  animation-delay: 0.15s;
+}
+.complete-panel .loader .dots .dot:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  6.25% {
+    transform: translateY(calc( -0.382 * var(--s3)));
+  }
+  12.5% {
+    transform: translateY(calc( -0.707 * var(--s3)));
+  }
+  18.75% {
+    transform: translateY(calc( -0.924 * var(--s3)));
+  }
+  25% {
+    transform: translateY(calc( -1 * var(--s3)));
+  }
+  32.25% {
+    transform: translateY(calc( -0.924 * var(--s3)));
+  }
+  37.5% {
+    transform: translateY(calc( -0.707 * var(--s3)));
+  }
+  43.75% {
+    transform: translateY(calc( -0.382 * var(--s3)));
+  }
+  50% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  75% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.disclaimer {
+  font-size: 0.8em;
+  line-height: 1.4em;
+  opacity: 0.7;
+}
+
+#card {
+  width: 100%;
+  padding: var(--s3);
+  border-radius: var(--s3);
+  border: 1px solid var(--col-grey);
+}
+
+.price {
+  font-size: 60px;
+  line-height: 1em;
+}
+
+.payment-method-selector {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--s3);
+}
+
+.existing-payment-method-descriptor {
+  display: inline-block;
+  border-radius: var(--s2);
+  padding: var(--s3);
+  background-color: var(--col-grey-lighter);
+  color: var(--col-grey-dark);
+  font-size: 0.8em;
+  line-height: 1em;
+  letter-spacing: 110%;
+}
+
+.stripe-logo {
+  width: 120px;
+}
+
+.period {
+  opacity: 0.7;
+}
+
+.card-info .btn {
+  width: 100%;
+  max-width: unset;
+}
+.card-info .error, .card-info .failedReason {
+  color: var(--col-stripe-error);
+}
+
+.login-form {
+  width: 100%;
+  max-width: 450px;
+}
+
+@media screen and (min-width: 780px) {
+  .payment-panel, .summary-panel, .complete-panel, .login-panel {
+    padding: var(--s6);
+    padding-top: 25%;
+  }
+
+  .confirm-subscription-container {
+    grid-template-columns: 1fr 1fr;
+  }
+}

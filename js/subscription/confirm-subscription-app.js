@@ -1,0 +1,1 @@
+import Vue from"../lib/vue.esm.browser.js";import App from"./confirmSubscriptionPage/App.js";new Vue({el:"#confirm-subscription-app",components:{App},template:"<App />"});

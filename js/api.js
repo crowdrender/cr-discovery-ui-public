@@ -1,0 +1,1 @@
+export async function graphQLQuery(a,b){return fetch("/api/v02/graph",{credentials:"same-origin",headers:{"Content-Type":"application/json",Accept:"application/json"},method:"POST",body:JSON.stringify({query:a,variables:b})})}
