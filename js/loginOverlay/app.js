@@ -17,11 +17,20 @@ import Vue from"../lib/vue.esm.browser.js";const template=html`
         <input type="password" name="password" placeholder="Password" v-model="password" />
         <input type="submit" class="span-2 submit action" value="Sign up" />
         <div class="span-2">
-          <div class="checkbox">
-            <input type="checkbox" name="subscribe" v-model="subscribe" />
-            <div class="checkmark"></div>
+          <div>
+            <div class="checkbox">
+              <input type="checkbox" name="subscribe" v-model="subscribe" />
+              <div class="checkmark"></div>
+            </div>
+            <label for="subscribe">Subscribe to our mailing list</label>
           </div>
-          <label for="subscribe">Subscribe to our mailing list</label>
+          <div>
+            <div class="checkbox">
+              <input type="checkbox" name="acceptedTerms" v-model="acceptedTerms" />
+              <div class="checkmark"></div>
+            </div>
+            <label for="acceptedTerms">By signing up, you accept our <a href="/terms" target="_blank">terms and conditions</a>.</label>
+          </div>
         </div>
         <div class="span-2">
           <p>Already have an account? <a href="#" @click="switchToLogin">Log in instead</a>.</p>
@@ -29,4 +38,4 @@ import Vue from"../lib/vue.esm.browser.js";const template=html`
       </form>
   </div>
 </div>
-`,App={template,components:{},data:()=>({page:"login",subscribe:!0,username:"",password:""}),computed:{loginUrl:()=>`/login?redirectUrl=${encodeURIComponent(window.location.pathname)}`,signupUrl:()=>`/sign-up?redirectUrl=${encodeURIComponent(window.location.pathname)}`,showLoginForm(){return"login"===this.page},showSignupForm(){return"signup"===this.page}},methods:{switchToSignup(){this.page="signup"},switchToLogin(){this.page="login"}}};export default App;function html(a,...b){return a.map((a,c)=>`${a}${b[c]||""}`.trim()).join("").trim()}new Vue({el:"#login-overlay",components:{App},template:"<App />"});
+`,App={template,components:{},data:()=>({page:"login",subscribe:!0,acceptedTerms:!0,username:"",password:""}),computed:{loginUrl:()=>`/login?redirectUrl=${encodeURIComponent(window.location.pathname)}`,signupUrl:()=>`/sign-up?redirectUrl=${encodeURIComponent(window.location.pathname)}`,showLoginForm(){return"login"===this.page},showSignupForm(){return"signup"===this.page}},methods:{switchToSignup(){this.page="signup"},switchToLogin(){this.page="login"}}};export default App;function html(a,...b){return a.map((a,c)=>`${a}${b[c]||""}`.trim()).join("").trim()}new Vue({el:"#login-overlay",components:{App},template:"<App />"});
