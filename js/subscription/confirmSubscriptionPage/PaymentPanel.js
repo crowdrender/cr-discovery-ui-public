@@ -26,7 +26,7 @@ import Sleep from"../../modules/Sleep.js";import{CreatePaymentMethodController}f
     <div class="disclaimer">
       By subscribing, you allow CrowdRender to charge your card for this payment and future payments until you cancel your subscription.
     </div>
-    <img class="stripe-logo" src="//localhost:3001/images/Powered by Stripe - blurple.png" />
+    <img class="stripe-logo" src="https://crowdrender.github.io/cr-discovery-ui-public/images/Powered by Stripe - blurple.png" />
   </div>
 </div>
 `;export const PaymentPanel={template,components:{LoginForm,AddPaymentMethodForm},data:()=>({loading:!1,paymentMethodSelection:"existing",error:null,success:!1,failedReason:null}),props:{disabled:Boolean,priceId:String,paymentMethod:Object,onSubmit:Function,email:String,stripeService:Object},async created(){this.createPaymentMethodController=new CreatePaymentMethodController(this.stripeService,this.email,"#card",a=>this.handleStatusChange(a)),await Sleep(1),this.createPaymentMethodController.setup()},computed:{buttonText(){return this.loading||this.disabled?"Loading...":"Subscribe"}},methods:{onFocussed(){this.paymentMethodSelection="new"},handleStatusChange(a){this.error=null,this.loading=!1;"success"===a||("loading"===a?this.loading=!0:"failed"===a.status?this.failedReason=a.message:"error"===a.status&&(a.message.length?this.error=a.message:this.onFocussed()))},async submitForm(){if("new"===this.paymentMethodSelection||!this.paymentMethod)try{await this.createPaymentMethodController.createPaymentMethod(),this.onSubmit()}catch(a){}else this.onSubmit()}}};function html(a,...b){return a.map((a,c)=>`${a}${b[c]||""}`.trim()).join("").trim()}
