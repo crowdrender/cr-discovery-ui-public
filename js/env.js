@@ -1,0 +1,1 @@
+export function getEnv(a){var b,c;return null!==(c=null===(b=window.env)||void 0===b?void 0:b[a])&&void 0!==c?c:null}

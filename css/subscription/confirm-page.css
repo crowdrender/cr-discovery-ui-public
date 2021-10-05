@@ -52,6 +52,33 @@ body > .footer {
   background-color: var(--col-primary);
   color: white;
 }
+.summary-panel .show-details {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--s2);
+  font-size: 0.8em;
+  width: auto;
+  color: var(--col-white);
+  opacity: 0.7;
+  text-align: end;
+}
+.summary-panel .show-details:hover {
+  color: var(--col-white);
+  opacity: 1;
+}
+.summary-panel .expand-symbol {
+  display: inline-block;
+  width: 1em;
+  height: 1em;
+  transition: transform 0.2s ease-in-out;
+}
+.summary-panel .expand-symbol.expanded {
+  transform: rotate(180deg);
+}
+.summary-panel .description {
+  font-size: 0.8em;
+}
 
 .summary-content, .payment-content, .complete-content, .login-content {
   gap: var(--s3);
