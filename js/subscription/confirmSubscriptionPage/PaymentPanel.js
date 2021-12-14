@@ -26,6 +26,9 @@ import{getEnv}from"../../env.js";import Sleep from"../../modules/Sleep.js";impor
     <div class="disclaimer">
       By subscribing, you allow CrowdRender to charge your card for this payment and future payments until you cancel your subscription.
     </div>
+    <div class="agree-to-terms">
+      By subscribing, you agree to CrowdRender's <a href="/terms" target="_blank">Terms and Conditions</a>.
+    </div>
     <img class="stripe-logo" :src="stripeLogoUrl" />
   </div>
 </div>

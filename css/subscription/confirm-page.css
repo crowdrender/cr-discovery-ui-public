@@ -166,7 +166,7 @@ body > .footer {
     transform: translateY(0);
   }
 }
-.disclaimer {
+.disclaimer, .agree-to-terms {
   font-size: 0.8em;
   line-height: 1.4em;
   opacity: 0.7;
