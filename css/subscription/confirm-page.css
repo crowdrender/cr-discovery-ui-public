@@ -166,7 +166,9 @@ body > .footer {
     transform: translateY(0);
   }
 }
-.disclaimer, .agree-to-terms {
+.disclaimer,
+.agree-to-terms,
+.paypal-checkout {
   font-size: 0.8em;
   line-height: 1.4em;
   opacity: 0.7;
