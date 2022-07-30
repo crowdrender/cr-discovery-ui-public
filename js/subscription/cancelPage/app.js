@@ -1,7 +1,7 @@
 const template=html`
 <div class="summary">
   <div v-if="status === 'default'">
-    <p>This will cancel your subscription at the \${{subscription.amount / 100}} tier at the end of the current billing period. You will still be able to make use of your supporter perks until the billing period finishes.</p>
+    <p>This will cancel your subscription at the {{subscription.tier}} tier at the end of the current billing period. You will still be able to make use of your supporter perks until the billing period finishes.</p>
     <button @click="onCancel" class="btn">Cancel Subscription</button>
   </div>
   <div v-if="status === 'success'">
