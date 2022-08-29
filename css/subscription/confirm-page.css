@@ -1,3 +1,11 @@
+.theme-dark, .summary-panel {
+  --col-text: var(--col-text-light);
+}
+
+.theme-light {
+  --col-text: var(--col-text-dark);
+}
+
 :root {
   --col-stripe-error: #eb1c26;
 }
