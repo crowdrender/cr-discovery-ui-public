@@ -1,4 +1,4 @@
-.theme-dark, .summary-panel {
+.theme-dark, .complete-panel .loader, .summary-panel {
   --col-text: var(--col-text-light);
 }
 
@@ -111,9 +111,8 @@ body > .footer {
   align-items: center;
   border-radius: var(--s2);
   background-color: var(--col-primary);
-  color: white;
   height: 36px;
-  width: 160px;
+  width: 256px;
 }
 .complete-panel .loader .dots {
   display: flex;

@@ -1,0 +1,32 @@
+.theme-dark, .hero {
+  --col-text: var(--col-text-light);
+}
+
+.theme-light {
+  --col-text: var(--col-text-dark);
+}
+
+.hero {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--col-primary);
+}
+.hero .btn {
+  background-color: var(--col-alt);
+  padding: var(--s3) var(--s5);
+}
+
+.pad-contents {
+  --padding: var(--s4);
+  padding: var(--padding);
+  margin: auto;
+  width: 100%;
+  max-width: calc(960px + (var(--padding) * 2));
+}
+
+@media screen and (min-width: 780px) {
+  .pad-contents {
+    --padding: var(--s6);
+  }
+}
